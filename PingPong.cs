@@ -5,19 +5,20 @@ All numbers divisible by 3 are replaced by "ping".
 All numbers divisible by 5 are replaced by "pong"
 All numbers divisible by both 3 and 5 are replaced by "ping-pong". 
 */
-class MealTime
+class PingPong
 {
   static void Main()
   {
     Console.WriteLine("Please enter a number:");
     string stringNumber = Console.ReadLine();
     int userNumber = int.Parse(stringNumber);
-    PingPong(userNumber);
+    Console.WriteLine("-----");
+    Output(userNumber);
   }
 
-  static void PingPong(int num)
+  static void Output(int num)
   {
-    for (int i = 1; i < num; i++){
+    for (int i = 1; i <= num; i++){
       if (i % 3 == 0 && i % 5 == 0){
         Console.WriteLine("ping-pong");
       } else if (i % 3 == 0){
